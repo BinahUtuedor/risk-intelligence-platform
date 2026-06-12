@@ -21,7 +21,7 @@ for step in pipeline:
 
     result = subprocess.run(
         [sys.executable, "-m", step],
-        cwd=str(BASE_DIR),   # 🔥 critical fix (must be string for Windows safety)
+        cwd=str(BASE_DIR),   # must be string for Windows safety
         check=True
     )
 
