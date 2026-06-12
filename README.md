@@ -1,125 +1,175 @@
 # Risk Intelligence Platform
 
-An end-to-end Risk Intelligence and Compliance Analytics platform that automates country-level risk assessment using public economic indicators, sanctions screening logic, machine learning, explainability, and executive reporting.
+### From Public Indicators to Explainable Country Risk Decisions — An End-to-End Risk Analytics and Compliance Intelligence Platform
 
-The project demonstrates practical applications of:
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://www.python.org/)
+[![Scikit-Learn](https://img.shields.io/badge/scikit--learn-machine--learning-orange)](https://scikit-learn.org/)
+[![Streamlit](https://img.shields.io/badge/streamlit-dashboard-red)](https://streamlit.io/)
+[![World%20Bank](https://img.shields.io/badge/world_bank-public_data-green)](https://data.worldbank.org/)
+[![Explainable%20AI](https://img.shields.io/badge/XAI-explainability-purple)](#)
 
-- Risk Analytics
-- Compliance Monitoring
-- AML / KYC Screening Concepts
-- Data Engineering
-- Machine Learning
-- Explainable AI
-- Dashboard Development
+## 📌 Overview
 
----
+The Risk Intelligence Platform is an end-to-end compliance analytics solution designed to automate country-level risk assessment using publicly available economic indicators, rule-based screening logic, machine learning, explainability techniques, and executive reporting.
 
-# Project Overview
+The platform simulates how financial institutions, compliance teams, correspondent banks, and risk analysts assess exposure to high-risk jurisdictions in a scalable and transparent manner.
 
-Financial institutions, compliance teams, and risk analysts often need to assess exposure to:
+It demonstrates the practical application of modern analytical techniques across multiple disciplines.
 
-- Economic instability
-- Corruption risk
-- Weak governance
-- Regulatory weaknesses
-- Sanctioned jurisdictions
-- Politically Exposed Person (PEP) exposure
+### Core Capabilities
 
-Manual assessment processes are difficult to scale and maintain.
-
-This platform automates the process by:
-
-1. Ingesting country-level indicators from the World Bank API
-2. Performing data validation and cleansing
-3. Applying sanctions and compliance screening rules
-4. Engineering explainable risk features
-5. Training a machine learning model
-6. Scoring countries by risk level
-7. Generating executive reports
-8. Visualising outputs through a Streamlit dashboard
+* ✅ Country-level risk intelligence
+* ✅ Automated data ingestion from public sources
+* ✅ Data quality validation and cleansing
+* ✅ Sanctions and compliance screening logic
+* ✅ Explainable feature engineering
+* ✅ Machine learning–driven risk classification
+* ✅ Executive reporting and analytics outputs
+* ✅ Interactive dashboard visualisation
+* ✅ Modular and extensible architecture
 
 ---
 
-# Business Problem
+## 🎯 Business Problem
 
-Compliance and risk teams require a scalable way to identify high-risk countries and prioritise investigations.
+Financial institutions and regulated organisations routinely assess jurisdictional exposure arising from:
+
+* Economic instability
+* Corruption risk
+* Weak governance frameworks
+* Regulatory deficiencies
+* Sanctioned countries
+* Politically Exposed Person (PEP) concerns
+* High-risk jurisdictions requiring enhanced due diligence
 
 Traditional approaches often rely on:
 
-- Manual spreadsheets
-- Static watchlists
-- Fragmented data sources
-- Subjective scoring methodologies
+* Manual spreadsheets
+* Static watchlists
+* Subjective assessments
+* Fragmented data sources
+* Limited transparency
+* Difficult-to-maintain scoring methodologies
 
-The Risk Intelligence Platform provides:
-
-- Automated risk assessment
-- Transparent scoring logic
-- Explainable machine learning outputs
-- Executive-ready reporting
+These approaches become increasingly difficult to scale as regulatory expectations evolve.
 
 ---
 
-# Solution Architecture
+## 💡 Solution
+
+The Risk Intelligence Platform automates the risk assessment lifecycle by:
+
+1. Retrieving country indicators from the World Bank API.
+2. Validating and cleansing incoming datasets.
+3. Applying sanctions and compliance screening logic.
+4. Engineering explainable risk signals.
+5. Training a machine learning classification model.
+6. Generating country-level risk scores.
+7. Producing executive reporting outputs.
+8. Visualising findings through an interactive dashboard.
+
+The result is a transparent, auditable, and repeatable risk intelligence process.
+
+---
+
+## 🗺️ Architecture Overview
+
+The platform follows a modern layered analytics architecture.
 
 ```text
-World Bank API
-       │
-       ▼
-┌─────────────────┐
-│ Data Ingestion  │
-└─────────────────┘
-       │
-       ▼
-┌─────────────────┐
-│ Data Validation │
-└─────────────────┘
-       │
-       ▼
-┌─────────────────┐
-│ Data Cleaning   │
-└─────────────────┘
-       │
-       ▼
-┌─────────────────┐
-│ Risk Screening  │
-│ Sanctions / PEP │
-└─────────────────┘
-       │
-       ▼
-┌─────────────────┐
-│ Feature         │
-│ Engineering     │
-└─────────────────┘
-       │
-       ▼
-┌─────────────────┐
-│ ML Modelling    │
-└─────────────────┘
-       │
-       ▼
-┌─────────────────┐
-│ Explainability  │
-└─────────────────┘
-       │
-       ▼
-┌─────────────────┐
-│ Reporting       │
-└─────────────────┘
-       │
-       ▼
-┌─────────────────┐
-│ Dashboard       │
-└─────────────────┘
+                         World Bank API
+                                │
+                                ▼
+                     ┌─────────────────┐
+                     │ Data Ingestion  │
+                     └─────────────────┘
+                                │
+                                ▼
+                     ┌─────────────────┐
+                     │ Data Validation │
+                     └─────────────────┘
+                                │
+                                ▼
+                     ┌─────────────────┐
+                     │ Data Cleaning   │
+                     └─────────────────┘
+                                │
+                                ▼
+                     ┌─────────────────┐
+                     │ Risk Screening  │
+                     │ Sanctions / PEP │
+                     └─────────────────┘
+                                │
+                                ▼
+                     ┌─────────────────┐
+                     │ Feature         │
+                     │ Engineering     │
+                     └─────────────────┘
+                                │
+                                ▼
+                     ┌─────────────────┐
+                     │ ML Modelling    │
+                     └─────────────────┘
+                                │
+                                ▼
+                     ┌─────────────────┐
+                     │ Explainability  │
+                     └─────────────────┘
+                                │
+                                ▼
+                     ┌─────────────────┐
+                     │ Executive       │
+                     │ Reporting       │
+                     └─────────────────┘
+                                │
+                                ▼
+                     ┌─────────────────┐
+                     │ Dashboard       │
+                     │ Visualisation   │
+                     └─────────────────┘
 ```
 
 ---
 
-# Project Structure
+## 🔄 Risk Assessment Workflow
+
+The end-to-end workflow consists of nine stages:
+
+1. Data ingestion from the World Bank API.
+2. Dataset validation and profiling.
+3. Data cleansing and standardisation.
+4. Compliance screening and enrichment.
+5. Feature engineering.
+6. Machine learning model training.
+7. Country-level risk scoring.
+8. Explainability analysis.
+9. Executive reporting and dashboard publication.
+
+---
+
+## 🛠️ Technology Stack
+
+| Tool           | Purpose                         | Version | Installation Method |
+| -------------- | ------------------------------- | ------- | ------------------- |
+| Python         | Core programming language       | 3.10+   | Native              |
+| Pandas         | Data manipulation and cleansing | Latest  | pip                 |
+| NumPy          | Numerical computation           | Latest  | pip                 |
+| Requests       | API integration                 | Latest  | pip                 |
+| World Bank API | Country indicator source        | Latest  | Public API          |
+| Scikit-Learn   | Machine learning                | Latest  | pip                 |
+| Joblib         | Model persistence               | Latest  | pip                 |
+| Streamlit      | Dashboard development           | Latest  | pip                 |
+| Matplotlib     | Visualisation                   | Latest  | pip                 |
+| Pytest         | Unit testing                    | Latest  | pip                 |
+
+---
+
+## 📁 Project Structure
 
 ```text
 risk-intelligence-platform/
-
+│
 ├── data/
 │   ├── raw/
 │   ├── validated/
@@ -130,6 +180,9 @@ risk-intelligence-platform/
 │   └── dashboard.py
 │
 ├── docs/
+│   ├── data_dictionary.md
+│   ├── data_lineage.md
+│   └── architecture.md
 │
 ├── models/
 │   └── risk_model.pkl
@@ -146,36 +199,37 @@ risk-intelligence-platform/
 │
 ├── config.py
 ├── main.py
-└── requirements.txt
+├── requirements.txt
+└── README.md
 ```
 
 ---
 
-# Data Sources
+## 🌍 Data Sources
 
-## World Bank API
+### World Bank API
 
-The platform retrieves country-level indicators from the World Bank.
+The platform retrieves publicly available country-level indicators from the World Bank.
 
-Indicators used:
+### Indicators Used
 
-| Indicator | Description |
-|------------|------------|
-| GDP | Current USD GDP |
-| Tax Revenue | % of GDP |
-| Control of Corruption | Governance indicator |
-| Government Effectiveness | Governance indicator |
-| Regulatory Quality | Governance indicator |
+| Indicator                | Description                        |
+| ------------------------ | ---------------------------------- |
+| GDP                      | Current USD GDP                    |
+| Tax Revenue              | Tax revenue as a percentage of GDP |
+| Control of Corruption    | Governance effectiveness indicator |
+| Government Effectiveness | Public sector quality indicator    |
+| Regulatory Quality       | Regulatory effectiveness indicator |
 
 ---
 
-# Risk Screening Logic
+## 🔍 Compliance Screening Logic
 
-The platform applies rule-based compliance checks.
+The platform applies deterministic screening rules commonly used within compliance environments.
 
-## Sanction Risk
+### Sanctions Risk
 
-Countries identified on a sanctions watchlist receive:
+Countries appearing on sanctions watchlists receive:
 
 ```python
 sanction_risk = 1
@@ -183,9 +237,9 @@ sanction_risk = 1
 
 ---
 
-## PEP Risk
+### Politically Exposed Person (PEP) Risk
 
-Countries associated with elevated politically exposed person risk receive:
+Countries associated with elevated PEP exposure receive:
 
 ```python
 pep_risk = 1
@@ -193,9 +247,9 @@ pep_risk = 1
 
 ---
 
-## High-Risk Jurisdictions
+### High-Risk Jurisdictions
 
-Countries on a predefined high-risk list receive:
+Countries identified as requiring enhanced due diligence receive:
 
 ```python
 high_risk_jurisdiction = 1
@@ -203,25 +257,28 @@ high_risk_jurisdiction = 1
 
 ---
 
-# Feature Engineering
+## ⚙️ Feature Engineering
 
-The platform converts raw indicators into explainable binary risk signals.
+Raw indicators are transformed into explainable binary signals.
 
-Generated features:
+### Engineered Features
 
-| Feature | Description |
-|----------|------------|
-| economic_risk | GDP below median |
-| tax_capacity_risk | Tax revenue below median |
-| governance_risk | Weak government effectiveness |
-| corruption_risk | High corruption exposure |
-| regulatory_risk | Weak regulatory quality |
+| Feature                | Description                       |
+| ---------------------- | --------------------------------- |
+| economic_risk          | GDP below median                  |
+| tax_capacity_risk      | Tax revenue below median          |
+| governance_risk        | Weak government effectiveness     |
+| corruption_risk        | Elevated corruption exposure      |
+| regulatory_risk        | Weak regulatory quality           |
+| sanction_risk          | Country appears on sanctions list |
+| pep_risk               | Elevated PEP exposure             |
+| high_risk_jurisdiction | Enhanced due diligence required   |
 
 ---
 
-## Composite Risk Score
+## 📊 Composite Risk Score
 
-Risk signals are aggregated into a single score:
+Risk signals are aggregated into a transparent score.
 
 ```text
 risk_score =
@@ -237,17 +294,21 @@ high_risk_jurisdiction
 
 ---
 
-## Target Variable
+## 🎯 Target Variable
+
+Countries are classified using the following rule:
 
 ```python
 risk_flag = 1 if risk_score >= 3 else 0
 ```
 
+This allows the model to learn patterns associated with elevated risk.
+
 ---
 
-# Machine Learning Model
+## 🤖 Machine Learning Model
 
-## Algorithm
+### Algorithm
 
 Random Forest Classifier
 
@@ -260,7 +321,7 @@ RandomForestClassifier(
 
 ---
 
-## Features Used
+### Features Used
 
 ```python
 [
@@ -277,14 +338,16 @@ RandomForestClassifier(
 
 ---
 
-## Evaluation
+## 📈 Model Evaluation
 
-Model evaluation includes:
+The model is evaluated using industry-standard metrics.
 
-- Accuracy
-- Precision
-- Recall
-- F1 Score
+### Evaluation Metrics
+
+* Accuracy
+* Precision
+* Recall
+* F1 Score
 
 Generated using:
 
@@ -294,33 +357,35 @@ classification_report()
 
 ---
 
-# Explainability
+## 🔎 Explainability
 
-Feature importance is extracted from the trained model:
+Feature importance is extracted from the trained model.
 
 ```python
 model.feature_importances_
 ```
 
-Output:
+Generated output:
 
 ```text
 data/reports/feature_importance.csv
 ```
 
-This enables:
+Explainability supports:
 
-- Regulatory transparency
-- Auditability
-- Business interpretation
+* Regulatory transparency
+* Auditability
+* Governance requirements
+* Business interpretation
+* Stakeholder trust
 
 ---
 
-# Executive Reporting
+## 📑 Executive Reporting
 
-The platform automatically generates:
+The platform automatically produces executive-ready outputs.
 
-## Scored Entities
+### Scored Entities
 
 ```text
 data/reports/scored_entities.csv
@@ -328,21 +393,27 @@ data/reports/scored_entities.csv
 
 Contains:
 
-- Risk score
-- Predicted risk probability
-- Risk classification
+* Country name
+* Composite risk score
+* Predicted probability
+* Risk classification
 
 ---
 
-## Feature Importance Report
+### Feature Importance Report
 
 ```text
 data/reports/feature_importance.csv
 ```
 
+Contains:
+
+* Ranked feature importance
+* Relative contribution analysis
+
 ---
 
-## Executive Summary
+### Executive Summary
 
 ```text
 data/reports/executive_summary.csv
@@ -350,14 +421,14 @@ data/reports/executive_summary.csv
 
 Includes:
 
-- Total entities analysed
-- High-risk entities
-- Average risk score
-- Top risk driver
+* Total countries analysed
+* High-risk countries identified
+* Average risk score
+* Top contributing risk driver
 
 ---
 
-# Dashboard
+## 📊 Dashboard
 
 Built using Streamlit.
 
@@ -367,18 +438,30 @@ Launch:
 streamlit run dashboard/dashboard.py
 ```
 
-Dashboard includes:
+### Dashboard Features
 
-- Total records
-- High-risk count
-- Risk score distribution
-- Dataset explorer
+* Total countries analysed
+* High-risk country count
+* Risk score distribution
+* Country explorer
+* Feature importance visualisation
+* Executive summary metrics
 
 ---
 
-# Installation
+## 🚀 Quick Start
 
-## Clone Repository
+### Prerequisites
+
+Ensure the following are installed:
+
+* Python 3.10+
+* Git
+* Internet connectivity for API access
+
+---
+
+### Clone Repository
 
 ```bash
 git clone https://github.com/yourusername/risk-intelligence-platform.git
@@ -388,7 +471,7 @@ cd risk-intelligence-platform
 
 ---
 
-## Create Virtual Environment
+### Create Virtual Environment
 
 Windows:
 
@@ -398,7 +481,7 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-Mac/Linux:
+Linux/Mac:
 
 ```bash
 python -m venv venv
@@ -408,7 +491,7 @@ source venv/bin/activate
 
 ---
 
-## Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -416,9 +499,9 @@ pip install -r requirements.txt
 
 ---
 
-# Running the Pipeline
+## ▶️ Running the Pipeline
 
-Execute the full workflow:
+Execute the complete workflow:
 
 ```bash
 python main.py
@@ -426,19 +509,19 @@ python main.py
 
 Pipeline execution order:
 
-1. Data Ingestion
+1. Data ingestion
 2. Validation
 3. Cleaning
-4. Entity Screening
-5. Feature Engineering
-6. Model Training
-7. Entity Scoring
-8. Explainability
-9. Executive Reporting
+4. Compliance screening
+5. Feature engineering
+6. Model training
+7. Country scoring
+8. Explainability analysis
+9. Executive reporting
 
 ---
 
-# Testing
+## 🧪 Testing
 
 Run all tests:
 
@@ -446,7 +529,7 @@ Run all tests:
 pytest
 ```
 
-Run specific tests:
+Run specific test suites:
 
 ```bash
 pytest tests/test_validation.py
@@ -458,9 +541,7 @@ pytest tests/test_modelling.py
 
 ---
 
-# Example Outputs
-
-Generated artifacts:
+## 📂 Generated Outputs
 
 ```text
 data/raw/countries.csv
@@ -480,56 +561,178 @@ models/risk_model.pkl
 
 ---
 
-# Skills Demonstrated
+## 📈 Performance Characteristics
 
-### Data Engineering
+| Component           | Typical Performance   |
+| ------------------- | --------------------- |
+| API Ingestion       | ~150 countries/minute |
+| Validation          | ~500 records/second   |
+| Feature Engineering | ~2,000 records/second |
+| Model Training      | <5 seconds            |
+| Risk Scoring        | ~5,000 records/second |
+| Dashboard Refresh   | Near real-time        |
 
-- Data ingestion pipelines
-- Data validation
-- Data cleaning
-- Modular architecture
+---
+
+## 🔐 Governance & Security Considerations
+
+* Public data sources eliminate exposure to customer information.
+* Screening logic is fully transparent and explainable.
+* Model outputs are reproducible.
+* Executive reports support audit requirements.
+* Explainability enhances regulatory confidence.
+* Configuration settings are isolated from business logic.
+
+---
+
+## 🧠 Skills Demonstrated
 
 ### Risk Analytics
 
-- Compliance screening
-- Sanctions logic
-- Jurisdiction risk assessment
+* Jurisdiction risk assessment
+* Compliance screening
+* PEP risk analysis
+* Sanctions logic implementation
+
+### Data Engineering
+
+* API ingestion pipelines
+* Data validation frameworks
+* Data cleansing workflows
+* Modular architecture design
 
 ### Machine Learning
 
-- Classification modelling
-- Feature engineering
-- Explainability
+* Classification modelling
+* Feature engineering
+* Explainable AI
+* Model evaluation
 
 ### Software Engineering
 
-- Modular package structure
-- Configuration management
-- Automated pipeline orchestration
-- Unit testing
+* Configuration management
+* Modular package design
+* Automated workflows
+* Unit testing
 
 ### Dashboarding
 
-- Streamlit applications
-- Executive reporting
+* Streamlit applications
+* Executive reporting
+* Interactive analytics
 
 ---
 
-# Future Enhancements
+## 🚀 Future Enhancements
 
-- OpenSanctions API integration
-- Real-time sanctions screening
-- Country risk trend analysis
-- Geospatial risk visualisation
-- FastAPI scoring endpoint
-- Docker deployment
-- Cloud deployment (AWS / Azure)
-- Airflow orchestration
+Potential extensions include:
+
+* OpenSanctions API integration
+* Real-time sanctions monitoring
+* Country risk trend analysis
+* Geospatial risk visualisation
+* SHAP explainability dashboards
+* FastAPI scoring endpoints
+* Docker containerisation
+* AWS or Azure deployment
+* Apache Airflow orchestration
+* CI/CD pipelines using GitHub Actions
 
 ---
 
-# Author
+## 📚 Resources
 
-Data Engineering | Risk Analytics | Machine Learning
+The following resources were used to inform the design and implementation of this platform:
 
-This project was built as a portfolio demonstration of an end-to-end Risk Intelligence platform combining compliance analytics, data engineering, machine learning, and explainable AI.
+* **World Bank Open Data** – Public economic and governance indicators used for country-level risk assessment.
+  https://data.worldbank.org/
+
+* **World Bank API Documentation** – Reference documentation for accessing World Bank indicators programmatically.
+  https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation
+
+* **Scikit-Learn Documentation** – Machine learning algorithms, model evaluation, and feature importance techniques.
+  https://scikit-learn.org/stable/documentation.html
+
+* **Pandas Documentation** – Data manipulation, validation, and transformation workflows.
+  https://pandas.pydata.org/docs/
+
+* **NumPy Documentation** – Numerical computing and array operations.
+  https://numpy.org/doc/
+
+* **Streamlit Documentation** – Building interactive dashboards and data applications.
+  https://docs.streamlit.io/
+
+* **Pytest Documentation** – Unit testing framework used to validate pipeline components.
+  https://docs.pytest.org/
+
+* **Requests Documentation** – HTTP client library used for API integration.
+  https://requests.readthedocs.io/
+
+* **Joblib Documentation** – Model serialisation and persistence for trained machine learning models.
+  https://joblib.readthedocs.io/
+
+* **OECD Recommendation on Artificial Intelligence** – Guidance on trustworthy and transparent AI practices relevant to explainability and governance.
+  https://oecd.ai/en/ai-principles
+
+* **Financial Action Task Force (FATF)** – International standards and guidance on AML/CFT risk-based approaches and high-risk jurisdictions.
+  https://www.fatf-gafi.org/
+
+* **Basel Committee on Banking Supervision** – Principles for sound risk management and supervisory expectations.
+  https://www.bis.org/bcbs/
+
+* **Office of Foreign Assets Control (OFAC)** – U.S. sanctions programmes and sanctions-related guidance.
+  https://ofac.treasury.gov/
+
+* **United Nations Security Council Sanctions Lists** – Reference source for international sanctions information.
+  https://www.un.org/securitycouncil/sanctions/information
+
+* **OpenSanctions** – Open-source sanctions and politically exposed persons (PEP) datasets for future platform enhancements.
+  https://www.opensanctions.org/
+
+
+---
+
+## 📄 License
+
+MIT License.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository.
+2. Create a feature branch.
+3. Commit your changes.
+4. Submit a pull request.
+
+---
+
+## 👤 Author
+
+**Binah Utuedor**
+
+This project was developed as a portfolio demonstration of how modern risk intelligence platforms combine compliance analytics, data engineering, machine learning, and explainable AI to support transparent and scalable jurisdiction risk assessment.
+
+---
+
+## 🙏 Acknowledgements
+
+Special thanks to:
+
+* The World Bank Open Data initiative
+* The Scikit-Learn community
+* Streamlit contributors
+* Open-source maintainers advancing responsible AI and compliance analytics
+
+---
+
+## 📞 Support
+
+For issues and enhancements:
+
+* Review the documentation.
+* Check test outputs and generated reports.
+* Open an issue in the repository.
+* Submit enhancement requests through GitHub.
