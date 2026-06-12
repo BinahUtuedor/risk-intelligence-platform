@@ -27,9 +27,6 @@ Output
 ------
 data/raw/countries.csv
 
-Author
-------
-Risk Intelligence Platform
 """
 
 import requests

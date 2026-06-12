@@ -83,7 +83,7 @@ def engineer_features():
     df = calculate_composite_risk(df)
     df = create_target(df)
 
-    # 🔥 HARD SAFETY CHECK (prevents broken model training)
+    # HARD SAFETY CHECK (prevents broken model training)
     if df["risk_flag"].nunique() < 2:
         raise ValueError(
             "risk_flag has only one class. Adjust threshold or features."

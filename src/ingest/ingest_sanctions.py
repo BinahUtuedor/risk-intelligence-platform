@@ -1,11 +1,12 @@
 """
 Download sanctions reference data.
 
-This demonstrates:
-
 - compliance analytics
 - screening
 - risk intelligence
+
+The file currently stores sample data. Actual implementation is reserved for a future date.
+This demonstrates:
 
 """
 

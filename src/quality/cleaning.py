@@ -38,7 +38,7 @@ def clean_countries():
         if col in df.columns:
             df[col] = pd.to_numeric(df[col], errors="coerce")
 
-    # 🔥 FIX: only use columns that actually exist
+    # only use columns that actually exist
     existing_numeric_cols = [c for c in numeric_cols if c in df.columns]
 
     if existing_numeric_cols:
